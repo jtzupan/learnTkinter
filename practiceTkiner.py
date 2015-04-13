@@ -46,7 +46,22 @@ exampleCheck.grid(columnspan=2)
 ##########################################################
 #buttons
 #button1 = Button(where to put it, text of button, color of button)
+#button can also take a parameter called 'command'
 button1 = Button(topFrame, text='Some text', fg='red')
+
+##########################################################
+#how to bind a function to a widget
+##this is just one of many ways to do this
+#as an optional parameter to the button, add 'command = function here'
+#ex.
+buttonWithFunction = Button(root, text = 'print my name', command = somefunction)
+
+#another way to do this
+#pass an event as an input to the function
+## in the function definition
+#use bind method to bind the event to a user action
+buttonEvent.bind(<button>, example_function)
+
 
 
 #display window continuously, should always be present
