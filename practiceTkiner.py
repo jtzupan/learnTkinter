@@ -23,6 +23,7 @@ label1.pack()
 
 # a frame as in invisible container that can be places in a window, this creates frame, still needs to be placed
 topFrame = Frame(root)
+#can also add height and width parameters to arguments
 
 #########################################################
 #use entry to allow for user input/blank fields
@@ -61,6 +62,9 @@ buttonWithFunction = Button(root, text = 'print my name', command = somefunction
 ## in the function definition
 #use bind method to bind the event to a user action
 buttonEvent.bind(<button>, example_function)
+
+#can bind multiple events to a single widget
+#different button clicks are different actions
 
 
 
