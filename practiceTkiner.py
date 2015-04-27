@@ -66,7 +66,70 @@ buttonEvent.bind(<button>, example_function)
 #can bind multiple events to a single widget
 #different button clicks are different actions
 
+#################################################################
+# how to use tkinter with classes
+#can pass the frame when the object is initialized
+#frame.quit is the built in quitting function, breaks main loop
 
+###################################################################
+#how to make a drop down menu (9)
+#create basic function before the root call
+#create the menu using the tkinter command
+menu = Menu(root)
+#configure the menu
+root.config(menu = menu)
 
+#create the dropdown options
+#build a new menu and place it within the existing menu
+submenu = Menu(menu)
+#cascade adds the drop down and menu places the menu in the drop down
+menu.add_casdcade(label = 'File', menu = submenu)
+#add submenus for every line of the drop down
+submenu.add_command(label = 'new project', command= python command here)
+submenu1.add_command(label = 'new project', command= python command here)
+#seperator adds lines between drop down menu options
+submenu.add.seperator()
+
+###################################################################
+#creating a toolbar
+toolbar = Frame(root, bg = 'some color'
+insertToolbar = Button(toolbar, text = 'some text', command = doNothing)
+insertToolbar.pack(side = LEFT, padx = 2, pady = 2)
+printButton = Button(toolbar, text = 'some other text', command = doNothing)
+printButton.pack(side = LEFT)
+
+toolbar.pack(side = TOP, fill = x)
+
+####################################################################
+#toolbar continues
+status = Label(root, text = 'some text', bd = 1, relief = SUNKEN, anchor = W
+status.pack(side = BOTTOM, fill = X)
+
+####################################################################
 #display window continuously, should always be present
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
